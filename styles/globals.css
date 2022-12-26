@@ -1,107 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;500;700&display=swap');
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* colors */
 
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
+  /* main colors */
 
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
+  --clear-blue: #2c8eff;
+  --accent-yellow: #ffc936;
+  --black: #000000;
+  --gunmetal: #50595c;
+  --bluish-grey: #838e91;
+  --cloudy-blue: #b8c2c4;
+  --duck-egg-blue: #d6dee0;
 
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+  /* blue gradient */
+
+  --bright-sky-blue: #00c4ff;
+  --blue-gradient:  linear-gradient(to right, var(--bright-sky-blue), var(--clear-blue));
+
+  /* black gradient */
+
+  --white: #ffffff;
+  --black-gradient: linear-gradient(to left, var(--black-0) 100%, var(--black));
+
+  /* typography */
+
+  --ff-primary: 'League Spartan', sans-serif;
+
+  --fw-bold: 700;
+  --fw-medium: 500;
+  --fw-light: 300;
+
+  --fs-600: 87px;
+  --fs-500: 65px;
+  --fs-400: 56px;
+  --fs-300: 39px;
+  --fs-200: 26px;
+  --fs-100: 19px;
+
+  --fs-major-headline: var(--fs-600);
+  --fs-headline-1: var(--fs-500);
+  --fs-headline-2: var(--fs-400);
+  --fs-sub-headline: var(--fs-300);
+  --fs-big-body: var(--fs-200);
+  --fs-body-1: var(--fs-100);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* ------------- */
+/* Reset         */
+/* ------------- */
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
-
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+/* Reset Margins    */
+
+body,
+h1,
+h2,
+h3,
+p,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  font-weight: var(--fw-400);
+}
+
+/* Remove list styles on ul, ol elements with a list role,
+ which suggests default styling will be removed */
+
+ul,
+ol {
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
+/* Set core root defaults */
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* h1{
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-700);
+  line-height: var(--line-height-h1);
+  color: var(--Very-vark-blue);
+} */
+
+
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  /* line-height: var(--line-height-p);
+  font-family: var(--ff-kumbh-sans);
+  font-size: var(--fs-p);
+  font-weight: var(--fw-400);
+  background-color: var(--White);
+  color: var(--Dark-grayish-blue); */
+
+  /* to strech out elements */
+
+  display: grid;
+ 
+}
+
+#__next {
+  min-height: 100vh;
+  
+}
+
+/* Make images easier to work with */
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+figure{
+  margin:0;
+}
+
+/* Inherit fonts for inputs and buttons */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
   }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------- */
+/* Utility Classes  */
+/* ------------- */
+
+.container {
+  padding-inline: 5em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+/* for visually imapaired */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
