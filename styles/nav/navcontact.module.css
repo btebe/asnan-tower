@@ -1,0 +1,73 @@
+.nav_contact > .nav_contact_mobile {
+  display: none;
+}
+
+.nav_contact > .nav_contact_desktop {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav_contact > .nav_contact_desktop > span{
+  align-self: flex-end !important;
+}
+
+
+
+@media (max-width: 980px) {
+  .nav_contact > .nav_contact_desktop {
+    display: none !important;
+  }
+
+  .nav_contact > .nav_contact_mobile {
+    display: inherit;
+  }
+
+  .nav_contact {
+    place-self: flex-start;
+    gap: 0;
+  }
+
+  .nav_contact > .nav_contact_mobile {
+    display: grid;
+    grid-template-areas:
+      "icon text"
+      "icon tel" !important;
+    column-gap: 0.5rem;
+    row-gap: 0;
+  }
+  .nav_contact > .nav_contact_mobile > span {
+    grid-area: tel;
+    align-self: flex-end;
+  }
+
+   .nav_contact > .nav_contact_mobile > a {
+    grid-area: text;
+    align-self: flex-end;
+  }
+
+   .nav_contact > .nav_contact_mobile > img {
+    grid-area: icon;
+  }
+
+  .nav_contact > .nav_contact_mobile > .nav_contact_active, .nav_contact_active{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+}
+
+/* btn */
+
+.btn_warpper {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 50px;
+  gap: 0.5rem;
+  padding: 8.4px 14.6px 8.4px 21.4px;
+  justify-content: space-around;
+  border-radius: 29px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: rgba(255, 255, 255, 0.19);
+}

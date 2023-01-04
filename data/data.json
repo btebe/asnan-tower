@@ -1,0 +1,159 @@
+[
+  {
+    "logo": {
+      "icon": "/assets/shared/desktop/logo.svg",
+      "link": "/"
+    },
+    "social": [
+      {
+        "name": "youtube",
+        "icon": "/assets/social/youtube-brands.svg",
+        "link": "https://www.youtube.com/",
+        "height": 18,
+        "width": 18
+      },
+      {
+        "name": "instagram",
+        "icon": "/assets/social/instagram-brands.svg",
+        "link": "https://www.instagram.com/",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "name": "snapchat",
+        "icon": "/assets/social/snapchat-icon.svg",
+        "link": "https://www.snapchat.com/",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "name": "twitter",
+        "icon": "/assets/social/twitter-icon.svg",
+        "link": "https://www.twitter.com/",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "name": "linkedin",
+        "icon": "/assets/social/linkedin-icon.svg",
+        "link": "https://www.linkedin.com/",
+        "height": 14,
+        "width": 14
+      }
+    ],
+    "menu":[
+      {
+      "name":"Home",
+      "link": "/#home",
+      "dropdown": false,
+      "icon": ""
+    },
+    {
+      "name":"Why Asnan?",
+      "link": "/#reason",
+      "dropdown": false,
+      "icon": ""
+    },
+    {
+      "name":"Asnanopedia",
+      "link": "/#pedia",
+      "dropdown": false,
+      "icon": ""
+    },
+    {
+      "name":"Services",
+      "link": "/#services",
+      "dropdown": true,
+      "icon": "/assets/menu/drop-down-arrow.svg"
+    },
+    {
+      "name":"Our Team",
+      "link": "/#team",
+      "dropdown": false,
+      "icon": ""
+      
+    },
+    {
+      "name":"kids",
+      "link": "/#kids",
+      "dropdown": false,
+      "icon": "/assets/menu/Menu-Tab-Kids-button.svg"
+    },
+    {
+      "name":"Ansan Boutique",
+      "link": "/#boutique",
+      "dropdown": false,
+      "icon": ""
+      
+    },
+    {
+      "name":"Contact Us",
+      "link": "/#contact",
+      "dropdown": false,
+      "icon": ""
+      
+    }
+  ],
+  "services":[{
+    "image":{
+      "desktop":"/assets/service-nav/asnan-tower.png",
+      "mobile": "/assets/service-nav/asnan-tower.png"
+    },
+    "title":"Departments",
+    "sub":"Explore all the departments",
+    "sub2":"In Asnan Tower",
+    "link":"#"
+  },
+  {
+    "image":{
+      "desktop":"/assets/service-nav/teeth2.png",
+      "mobile" :"/assets/service-nav/teeth2.png"
+    },
+    "title":"World of Beauty",
+    "sub":"A drawing for every smile",
+    "sub2":"With Asnan Tower",
+    "link":"#"
+  },
+  {
+    "image":{
+      "desktop":"/assets/service-nav/testimonial.png",
+      "mobile":"/assets/service-nav/testimonial2.png"
+    },
+    "title":"Testimonials",
+    "sub":"Patients and businesses that",
+    "sub2":"Collaborated with Asnan",
+    "link":"#"
+  },
+  {
+    "image":{
+      "desktop":"/assets/service-nav/tech.png",
+      "mobile":"/assets/service-nav/tech2.png"
+    },
+    "title":"Asnan Technology",
+    "sub":"Latest technologies used",
+    "sub2":"At Asnan Tower",
+    "link":"#"
+  },
+  {
+    "image":{
+      "desktop":"/assets/service-nav/news2.png",
+      "mobile":"/assets/service-nav/news2.png"
+    },
+    "title":"News",
+    "sub":"Happy news from Asnan",
+    "sub2":"That makes your day",
+    "link":"#"
+  },
+  {
+    "image":{
+      "desktop":"/assets/service-nav/new-market.png",
+      "mobile":"/assets/service-nav/new-market-mobile.jpg"
+    },
+    "title":"Im New",
+    "sub":"You are taken care of by the",
+    "sub2":"Best doctors in the world!",
+    "link":"#"
+  }
+]
+  }
+]

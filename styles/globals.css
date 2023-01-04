@@ -37,6 +37,7 @@
   --fs-300: 39px;
   --fs-200: 26px;
   --fs-100: 19px;
+  --fs-50: 17px;
 
   --fs-major-headline: var(--fs-600);
   --fs-headline-1: var(--fs-500);
@@ -44,6 +45,23 @@
   --fs-sub-headline: var(--fs-300);
   --fs-big-body: var(--fs-200);
   --fs-body-1: var(--fs-100);
+  --fs-nav: 17px;
+  --fs-nav-tel: 30px;
+  --fs-nav-ar: 15px;
+  --fs-nav-req: 15px;
+  --fs-droptitle: var(--fs-500);
+  --fs-drop-p: var(--fs-100);
+  --fs-close: 15px;
+
+
+}
+
+/* mobile & tablet */
+@media (max-width: 980px) {
+  :root {
+    --fs-nav-tel: 12px;
+    --fs-nav-req: 12px;
+  }
 }
 
 /* ------------- */
@@ -111,16 +129,17 @@ a {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
+  font-family: var(--ff-primary);
+  /* background-color: grey; */
   /* line-height: var(--line-height-p);
   font-family: var(--ff-kumbh-sans);
   font-size: var(--fs-p);
   font-weight: var(--fw-400);
   background-color: var(--White);
   color: var(--Dark-grayish-blue); */
-
   /* to strech out elements */
-
   display: grid;
+  /* z-index: -1; */
  
 }
 
@@ -133,11 +152,24 @@ body {
 
 img,
 picture {
-  max-width: 100%;
+  /* max-width: 100%; */
   display: block;
+}
+
+picture{
+   width: 100%;
+   height: 100%;
 }
 figure{
   margin:0;
+}
+
+header {
+  /* position: fixed; */
+  width: 100%;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -149,13 +181,22 @@ select {
   font: inherit;
 }
 
+button{
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
   }
-
   *,
   *::before,
   *::after {
@@ -171,9 +212,22 @@ select {
 /* ------------- */
 
 .container {
-  padding-inline: 5em;
+  padding-inline: 3em;
   margin-inline: auto;
   max-width: 80rem;
+}
+/* mobile & tablet */
+@media (max-width: 980px){
+  .container {
+    padding-inline: 2em;
+  }
+}
+
+/* mobile & tablet */
+@media (max-width: 500px){
+  .container {
+    padding-inline: 1em;
+  }
 }
 
 /* for visually imapaired */
@@ -189,3 +243,53 @@ select {
   white-space: nowrap;
   border: 0;
 }
+
+.nav-fs{
+  font-size: var(--fs-nav);
+  font-weight: var(--fw-light);
+  line-height: normal;
+  /* color:var(--white); */
+}
+
+.nav-tel{
+  font-size: var(--fs-nav-tel);
+  font-weight: var(--fw-bold);
+  color: var(--white);
+}
+
+.nav-ar{
+  font-size: var(--fs-nav-ar);
+  color: var(--white);
+}
+
+.nav-req{
+  font-size: var(--fs-nav-req);
+  color: var(--white);
+}
+
+.droptitle{
+  font-size: var(--fs-droptitle);
+  font-weight: var(--fw-bold);
+  line-height: normal;
+  color: var(--white);
+}
+
+.drop-p{
+  font-size: var(--fs-drop-p);
+  font-weight: var(--fw-light);
+  line-height: 1.21;
+  color: var(--white);
+}
+
+.close-p{
+  font-size: var(--fs-close);
+  font-weight: var(--fw-light);
+  line-height: normal;
+  color: var(--white);
+
+}
+
+
+
+
+

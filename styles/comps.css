@@ -1,0 +1,141 @@
+
+main{
+  height: 1000px !important;
+  background-image: url('../public/assets/hero/Asnan_Cover_Big.png');
+  background-color: var(--white);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* layers */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 200;
+  display: none;
+}
+
+/* drop down */
+
+.dropdown_container {
+  width: 100%;
+  background-color: transparent;
+  height: fit-content;
+  z-index: 10;
+  cursor: pointer;
+  outline: 1px red solid;
+}
+
+.drop_layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: blueviolet;
+  z-index: -1;
+}
+
+.mobile_bg_layer{
+  display: none;
+}
+
+/* layers */
+@media (max-width: 980px){
+  .drop_layer {
+    display: none;
+  }
+  .showDrop{
+    display: none;
+  }
+  .mobile_bg_layer{
+    display: inherit;
+}
+}
+
+.dropdown_container {
+  display: grid;
+  grid-template-areas:
+    "article closebtn"
+    "feed feed";
+  grid-template-rows: min-content min-content;
+  padding-top: 3rem;
+}
+
+.dropdown_container > article {
+  grid-area: article;
+}
+
+.dropdown_container > .dropdown_close {
+  grid-area: closebtn;
+  justify-self: flex-end;
+  /* align-self: center;
+  margin-bottom: 20%; */
+}
+
+.dropdown_container > .dropdown_options {
+  grid-area: feed;
+}
+
+.dropdown_container > article {
+  display: flex;
+  gap: 2rem;
+
+  align-items: center;
+}
+
+.dropdown_container > article > p {
+  max-width: 48ch;
+}
+
+.dropdown_container > .dropdown_close {
+  display: flex;
+  /* align-items: center; */
+  gap: 0.5rem;
+}
+
+.dropdown_container > .dropdown_close > span {
+  padding-top: 0.5rem;
+}
+
+
+/* mobile bg nav2 */
+
+.mobile_bg_layer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-color: brown;
+}
+
+
+/* dropdown icon */
+.dropicon {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
+}
+
+/* blur layer */
+
+.dropdwon_blur_layer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* z-index: -1; */
+  backdrop-filter: blur(100%);
+}
+
+

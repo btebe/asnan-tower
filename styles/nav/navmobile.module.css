@@ -1,0 +1,79 @@
+/* mobile nav */
+
+.mobile_nav_dropdwon >.mobile_nav{
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1rem;
+  
+}
+
+.mobile_nav_dropdwon > .mobile_nav > li {
+  padding-block: 2rem;
+  
+}
+
+.mobile_nav_dropdwon >.mobile_nav > li:where(:not(:last-child)){
+  border-bottom: 1px solid var(--white);
+}
+
+.mobile_nav_dropdwon >.mobile_nav > li:hover > :is(a, span) {
+  color: var(--accent-yellow) !important;
+  font-weight: var(--fw-bold) !important;
+  filter: invert(0.3) sepia(0.5) saturate(7.5) hue-rotate(0deg) brightness(1);
+}
+
+.mobile_nav_dropdwon > .mobile_nav > li > a,.mobile_nav_dropdwon > .mobile_nav > li > div > span{
+  color: var(--white);
+}
+
+/* onscroll */
+
+.mobile_nav.onscroll > li > a{
+  color: var(--white);
+}
+
+@media (max-width: 980px){
+  
+}
+
+.mobile_nav_dropdwon > .mobile_social {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* temp font */
+.mobile_nav_dropdwon > .mobile_social > p{
+  font-size: 13px;
+  font-weight: var(--fw-light);
+  color: var(--white);
+}
+
+.mobile_nav_dropdwon > .menu_mobile_footer{
+  /* display: flex;
+  justify-content: space-between; */
+  position: relative;
+}
+
+.mobile_nav_dropdwon > .menu_mobile_footer > .menu_footer_contact{
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+@media (max-width: 980px){
+  .mobile_nav_dropdwon > .menu_mobile_footer > .menu_footer_img{
+  height: 300px;
+  width: 100%;
+  mix-blend-mode: multiply;
+  background-image: url('../../public/assets/menu/Asnan-3d-tower.jpg');
+  background-repeat: no-repeat;
+  background-position: 144% 3%;
+}
+}
+
+
